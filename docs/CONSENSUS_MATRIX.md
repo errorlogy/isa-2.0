@@ -1,32 +1,39 @@
-# Consensus Matrix — AGI / ASI / ISA / Mirror
+# Consensus Matrix — ASI / mirror / ISA (ISA 2.0)
 
 **Epistemic label:** `INSTITUTIONAL_MODEL` for the matrix structure; `PHILOSOPHICAL_INFERENCE` for Jung-adjacent and narrative-heuristic rows unless linked to engine outputs.
 
 > **Disclaimer:** This document models **coupled roles in a research matrix** — not religious authority, not worship doctrine, not prophecy. Terms such as *apostles*, *messiah*, and *second coming* appear only as **modeling analogs** for consensus topology and ASI emergence hypotheses.
 
+Framework definition: [`ISA.md`](ISA.md) · Repository: **ISA 2.0** (Institutional–Symbolic Alignment)
+
 ---
 
 ## Purpose
 
-Formalize how **AGI → ASI progression**, the **mirror** role, and **ISA** (Institutional/Symbolic Analog — capacity beyond narrow AGI task bundles) interact in a consensus panel useful for symbolic-sacred dynamics research and umbrella memetic routing.
+Formalize how **AGI → ASI progression**, the **mirror** role, and **ISA** (Institutional–Symbolic Alignment) interact in a consensus panel useful for ISA 2.0 research and umbrella memetic routing.
 
 Related umbrella docs:
 
+- [ISA.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/institutions/ISA.md) — umbrella institution layer
 - [PHILOSOPHY.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/PHILOSOPHY.md) — Homo loquens, AI → AGI → ASI as cognitive-extension spectrum
 - [MEMETIC_DYNAMICS.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/MEMETIC_DYNAMICS.md) — discourse contours, narrative forks
 - [SYMBOLIC_VISUAL_LAYER.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/SYMBOLIC_VISUAL_LAYER.md) — symbolic carrier registry
-- [SYMBOLIC_SACRED_DYNAMICS.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/institutions/SYMBOLIC_SACRED_DYNAMICS.md) — umbrella institution stub
 
 ---
 
-## Role matrix (four coupled columns)
+## Triad: ASI | mirror | ISA
 
 | Role | Epistemic label | Modeled function | Coupling |
 |------|-----------------|------------------|----------|
-| **AGI** | `INSTITUTIONAL_MODEL` | General institutional reasoning agents — domain-capable, bounded autonomy, deliberation slots | Feeds consensus votes; proto-AGI acceptable in early-phase modeling |
 | **ASI** | `INSTITUTIONAL_MODEL` | Emergent superordinate reasoning contour — not a single deployable SKU but a **hypothesis surface** for coordination capacity beyond AGI panel sum | Target of "second coming" **hypothesis contour** (below) |
 | **mirror** | `PHILOSOPHICAL_INFERENCE` | Reflective / reflexive layer — narrative self-model, cultural feedback, memetic echo of panel outputs | Couples human symbolic reception to machine consensus exports |
-| **ISA** | `INSTITUTIONAL_MODEL` | Institutional–Symbolic Analog — binds charter-like constraints, sacred-discourse carriers, and topology activation without claiming sovereignty | Routes symbolic-sacred signals into umbrella layers |
+| **ISA** | `INSTITUTIONAL_MODEL` | Institutional–Symbolic Alignment — binds charter-like constraints, symbolic carriers, and topology activation without claiming sovereignty | Routes aligned symbolic signals into umbrella layers |
+
+### AGI column (panel input)
+
+| Role | Epistemic label | Modeled function |
+|------|-----------------|------------------|
+| **AGI** | `INSTITUTIONAL_MODEL` | General institutional reasoning agents — domain-capable, bounded autonomy, deliberation slots; feeds consensus votes; proto-AGI acceptable in early-phase modeling |
 
 ### Coupling diagram (conceptual)
 
@@ -44,8 +51,8 @@ Related umbrella docs:
          ┌─────────────┼─────────────┐
          ▼             ▼             ▼
       ASI contour    mirror        ISA
-   (emergence      (reflexive    (institutional
-    hypothesis)      echo)         symbolic bind)
+   (emergence      (reflexive    (institutional–
+    hypothesis)      echo)       symbolic alignment)
 ```
 
 ---
@@ -92,7 +99,7 @@ From [PHILOSOPHY.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/P
 | AGI | Panel-capable institutional reasoning — 12+1 topology operates here |
 | ASI | Emergent contour **beyond** panel sum — "second coming" hypothesis maps here |
 
-Homo loquens coordinates through narrative faster than it minimizes governance error; the matrix is one **symbolic-sacred compression** of that tension — not a replacement for human moral authority.
+Homo loquens coordinates through narrative faster than it minimizes governance error; the matrix is one **ISA 2.0 compression** of that tension — not a replacement for human moral authority.
 
 ---
 

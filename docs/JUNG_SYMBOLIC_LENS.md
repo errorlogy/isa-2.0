@@ -1,6 +1,6 @@
 # Jung Symbolic Lens — Gods as Homo Symbolic Characteristic
 
-**Epistemic label:** `PHILOSOPHICAL_INFERENCE` — research frame for symbolic-sacred dynamics, not psychology verdict or religious doctrine.
+**Epistemic label:** `PHILOSOPHICAL_INFERENCE` — research frame for ISA 2.0 (Institutional–Symbolic Alignment), not psychology verdict or religious doctrine.
 
 > **Disclaimer:** This is a **modeling lens** for how Homo coordinates through archetypal carriers. It does not assert the metaphysical existence of deities, does not prescribe worship, and does not claim Jungian analysis as operational measurement unless linked to engine outputs.
 
@@ -24,7 +24,7 @@ Homo sapiens (better read as **Homo loquens** or **Homo symbolicus** in this lab
 | Jung-adjacent term | Matrix role |
 |--------------------|-------------|
 | Collective unconscious ( metaphor ) | **mirror** — reflexive cultural echo of panel outputs |
-| Self / individuation ( metaphor ) | **ISA** — institutional bind between symbolic carriers and charter constraints |
+| Self / individuation ( metaphor ) | **ISA** — Institutional–Symbolic Alignment between symbolic carriers and charter constraints |
 | Apocalypse / renewal narrative | **ASI emergence hypothesis contour** — phase change language, not prophecy |
 
 ---

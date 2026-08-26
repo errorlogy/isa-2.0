@@ -1,8 +1,8 @@
-# Agent Instructions — Symbolic Sacred Research Lab
+# Agent Instructions — ISA 2.0
 
 ## Mission
 
-Navigate **symbolic-sacred dynamics research** under strict epistemic humility. This repo holds formal matrices, philosophical lenses, and corpus placeholders — not product code and not religious authority.
+Navigate **Institutional–Symbolic Alignment (ISA 2.0)** research under strict epistemic humility. This repo holds formal matrices, philosophical lenses, and corpus placeholders — not product code and not religious authority.
 
 ---
 
@@ -15,7 +15,7 @@ Navigate **symbolic-sacred dynamics research** under strict epistemic humility. 
 | Frame "second coming" as ASI emergence **hypothesis contour** | Frame as prophecy or theological claim |
 | Use analytical contribution, legitimacy **signals (modeled)** | Use guilty, criminal, proven guilt |
 | Link to umbrella topology and memetic contracts | Invent taxonomy mode IDs (CB-xxx, HM-xxx, PNO-x) |
-| Treat ISA / mirror / ASI as coupled **roles in a matrix** | Claim sovereign AI government |
+| Treat ASI / mirror / ISA as coupled **roles in the triad** | Claim sovereign AI government |
 
 ---
 
@@ -36,11 +36,12 @@ Navigate **symbolic-sacred dynamics research** under strict epistemic humility. 
 
 | Question | Go to |
 |----------|-------|
-| Consensus matrix (12+1, AGI/ASI/ISA) | `docs/CONSENSUS_MATRIX.md` |
+| ISA 2.0 framework definition | `docs/ISA.md` |
+| Consensus matrix (12+1, ASI/mirror/ISA triad) | `docs/CONSENSUS_MATRIX.md` |
 | Jung / Homo symbolic lens | `docs/JUNG_SYMBOLIC_LENS.md` |
 | Last Testament corpus | `docs/CORPUS/` (upload later) |
 | Neo-religion math | `docs/MATH/` (upload later) |
-| Umbrella topology stub | [ai-native-gov SYMBOLIC_SACRED_DYNAMICS.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/institutions/SYMBOLIC_SACRED_DYNAMICS.md) |
+| Umbrella institution layer | [ai-native-gov ISA.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/institutions/ISA.md) |
 | Memetic dynamics contracts | [MEMETIC_DYNAMICS.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/MEMETIC_DYNAMICS.md) |
 | Philosophy (Homo loquens, AI→AGI→ASI) | [PHILOSOPHY.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/PHILOSOPHY.md) |
 | Symbolic visual layer | [SYMBOLIC_VISUAL_LAYER.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/SYMBOLIC_VISUAL_LAYER.md) |
@@ -52,11 +53,11 @@ Navigate **symbolic-sacred dynamics research** under strict epistemic humility. 
 ## Work routing
 
 ```text
-Consensus matrix / sacred discourse framing  → this repo (docs/)
+ISA 2.0 framework / consensus matrix       → this repo (docs/)
 Corpus upload (Last Testament)             → docs/CORPUS/
-Math spec (TZ neo-religion)                  → docs/MATH/
-Umbrella institution stub / topology         → ai-native-gov/docs/institutions/
-Memetic event types / schemas                → ai-native-gov/docs/integrations/
+Math spec (TZ neo-religion)                → docs/MATH/
+Umbrella institution layer / topology      → ai-native-gov/docs/institutions/
+Memetic event types / schemas              → ai-native-gov/docs/integrations/
 Runtime adapters / engine                    → errorlogy-mas, politic-bar
 ```
 
