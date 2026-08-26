@@ -1,0 +1,25 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
+credentials.json
+secrets/
+
+# Large corpus drafts (upload intentionally via LFS or explicit add)
+docs/CORPUS/raw/
+docs/CORPUS/**/*.pdf
+docs/CORPUS/**/*.docx
+docs/MATH/raw/
+
+# Build artifacts
+dist/
+build/
+*.log
