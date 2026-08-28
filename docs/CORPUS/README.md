@@ -11,7 +11,8 @@
 | Item | Status |
 |------|--------|
 | DODECA-12 EIA v0.3 (executable harness) | Indexed — [`DODECA12_EIA_v0_3.md`](DODECA12_EIA_v0_3.md); raw under `raw/` (gitignored) |
-| Last Testament primary texts | Awaiting upload |
+| REALITY_GAME / GAME2 (ERG assembly) | Indexed — [`GAME2_INDEX.md`](GAME2_INDEX.md); raw under `raw/game2/` (gitignored) |
+| Last Testament primary texts | Partially covered by GAME2 theological layer; dedicated edition awaiting |
 | Annotated editions / forks | Awaiting upload |
 | Cross-links to consensus matrix | Active via [`../EIA.md`](../EIA.md) and [`../CONSENSUS_MATRIX.md`](../CONSENSUS_MATRIX.md) |
 
