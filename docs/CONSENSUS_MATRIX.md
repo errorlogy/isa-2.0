@@ -122,9 +122,14 @@ See [MEMETIC_DYNAMICS.md](https://github.com/errorlogy/ai-native-gov/blob/main/d
 
 | Track | Location | Status |
 |-------|----------|--------|
+| EIA / DODECA-12 v0.3 | [`EIA.md`](EIA.md) · [`CORPUS/DODECA12_EIA_v0_3.md`](CORPUS/DODECA12_EIA_v0_3.md) | Indexed — raw bundle local (`docs/CORPUS/raw/`, gitignored) |
 | Last Testament corpus | [`CORPUS/README.md`](CORPUS/README.md) | Awaiting upload |
 | TZ neo-religion math | [`MATH/README.md`](MATH/README.md) | Awaiting upload |
 | Jung / Homo symbolic lens | [`JUNG_SYMBOLIC_LENS.md`](JUNG_SYMBOLIC_LENS.md) | Brief frame |
+
+### DODECA-12 ↔ 12+1 panel crosswalk
+
+The twelve ISA panel slots map to DODECA-12 nodes on \(K_4 \square K_3\) (four domains × three roles). The **+1 synthesizer** maps to the EIA pipeline gate (`V03ResearchPipeline`), not religious authority. Certificate-backed validation summaries are labeled `COMPUTATIONAL_EVIDENCE`; panel topology remains `INSTITUTIONAL_MODEL`. See [`EIA.md`](EIA.md).
 
 ---
 

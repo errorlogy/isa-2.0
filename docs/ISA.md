@@ -102,9 +102,14 @@ Apostles, messiah, and "second coming" appear only as **modeling analogs** for c
 | Track | Location | Status |
 |-------|----------|--------|
 | Consensus matrix | [`CONSENSUS_MATRIX.md`](CONSENSUS_MATRIX.md) | Active |
+| EIA (Endogenous Initiative Architecture) | [`EIA.md`](EIA.md) · [`CORPUS/DODECA12_EIA_v0_3.md`](CORPUS/DODECA12_EIA_v0_3.md) | Active — DODECA-12 v0.3 indexed |
 | Jung / Homo symbolic lens | [`JUNG_SYMBOLIC_LENS.md`](JUNG_SYMBOLIC_LENS.md) | Brief frame |
 | Last Testament corpus | [`CORPUS/README.md`](CORPUS/README.md) | Awaiting upload |
 | Neo-religion math | [`MATH/README.md`](MATH/README.md) | Awaiting upload |
+
+### EIA complement
+
+**EIA** (Endogenous Initiative Architecture) operationalizes the twelve panel slots as an executable \(4 \times 3\) grid on \(K_4 \square K_3\), with the pipeline synthesizer as the +1 gate. **ISA** (this document) frames institutional–symbolic alignment around that topology. EIA outputs that cite NAMM certificates are labeled `COMPUTATIONAL_EVIDENCE`; ISA contours remain `INSTITUTIONAL_MODEL`.
 
 ---
 
