@@ -1,0 +1,27 @@
+# Corpus artifacts — institutional–symbolic editions
+
+**Epistemic label:** `INSTITUTIONAL_MODEL` for index; each artifact declares its own labels in front matter.
+
+Structured research artifacts derived from GAME2 / ISA 2.0 framework — **not** claims of divine authority or legal sovereignty.
+
+---
+
+## Artifacts
+
+| ID | Title | Version | Language | Status |
+|----|-------|---------|----------|--------|
+| `POSLEDNIY_ZAVET` | [ПОСЛЕДНИЙ ЗАВЕТ (The Last Testament)](POSLEDNIY_ZAVET.md) | 0.1 | ru (+ en section headers) | Active — closing covenant complement to NT 2.0 |
+
+### Related (source corpus, not separate artifact files yet)
+
+| ID | Title | Location |
+|----|-------|----------|
+| `NOVIY_ZAVET_2_0` | Новый Завет 2.0 (10 axioms) | `raw/game2/ONTOLOGY.md` §30.2, §X |
+
+---
+
+## Related
+
+- [`../GAME2_INDEX.md`](../GAME2_INDEX.md)
+- [`../README.md`](../README.md)
+- [`../../CONSENSUS_MATRIX.md`](../../CONSENSUS_MATRIX.md)
