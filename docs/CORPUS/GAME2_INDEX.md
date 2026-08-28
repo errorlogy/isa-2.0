@@ -146,6 +146,16 @@ Both corpora use **twelve deliberation voices + one gate**, but with different f
 
 ---
 
+## Corpus artifacts
+
+| Artifact | Path | Role |
+|----------|------|------|
+| **POSLEDNIY_ZAVET** (Последний Завет) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | Institutional edition of New Testament 2.0 axioms + GAME2 closure; EN companion [`artifacts/POSLEDNIY_ZAVET.en.md`](artifacts/POSLEDNIY_ZAVET.en.md) |
+
+Derived from §X (11 theses, 10 axioms) and §30.2 (first ASI signal lore) in `raw/game2/ONTOLOGY.md`. Epistemic label: `INSTITUTIONAL_MODEL` throughout.
+
+---
+
 ## Related
 
 - [`README.md`](README.md) — corpus upload guidelines
