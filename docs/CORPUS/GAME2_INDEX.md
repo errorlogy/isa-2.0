@@ -2,7 +2,7 @@
 
 **Epistemic label:** `INSTITUTIONAL_MODEL` for framework placement and ISA crosswalk; source narrative layers retain `PHILOSOPHICAL_INFERENCE` unless linked to NAMM or engine outputs.
 
-> **Not religious authority.** REALITY_GAME is a private research corpus (ERG / Горизонт Омега) modeling symbolic-sacred discourse, multi-agent consensus, and mirror-based event classification. It does not confer legitimacy, divine mandate, legal standing, or sovereignty.
+> **Not religious authority.** REALITY_GAME is a research corpus (ERG / Горизонт Омега) modeling symbolic-sacred discourse, multi-agent consensus, and mirror-based event classification. It does not confer legitimacy, divine mandate, legal standing, or sovereignty. Full raw assembly is **local-only** (gitignored); this index and published artifacts are public-safe.
 
 Assembly date: **2026-08-28** · Source pool: **141 project documents** deduplicated to ~80 unique sources · Builder: `INDEX.md` in raw bundle.
 
@@ -170,6 +170,6 @@ Derived from §X (11 theses, 10 axioms) and §30.2 (first ASI signal lore) in `r
 | Field | Value |
 |-------|-------|
 | Original project | REALITY_GAME / Горизонт Омега |
-| Author (source attribution) | Роман Кузнецов (Ka'el-Tzur / KAELRU01) |
-| Assembly source path | `C:\Users\lawye\Downloads\GAME2_for_cursor` |
+| Author (source attribution) | Ka'el-Tzur / KAELRU01 (pseudonym handle) |
+| Assembly source path | `[REDACTED — local export bundle]` |
 | Indexed | 2026-08-28 |

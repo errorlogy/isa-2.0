@@ -2,9 +2,9 @@
 
 ## Reporting a vulnerability
 
-Open a GitHub issue with the **security** label in this repository (collaborators only). Do not commit secrets, API keys, or live credentials in issues or pull requests.
+Open a GitHub issue with the **security** label in this repository. Do not commit secrets, API keys, or live credentials in issues or pull requests.
 
-This repository holds **research notes, formal matrices, and corpus placeholders** — not production runtime.
+This repository holds **research notes, formal matrices, and published corpus artifacts** — not production runtime.
 
 ## Secrets and documentation hygiene
 
@@ -18,7 +18,7 @@ When editing consensus matrices or corpus docs:
 
 1. Keep `epistemic_label` requirements explicit — outputs are `INSTITUTIONAL_MODEL`, not religious authority.
 2. Do not present modeling analogs (apostles, messiah role, second coming) as worship directives or prophecy.
-3. Large corpus uploads (Last Testament, TZ math) may contain sensitive personal material — review before push.
+3. Large raw corpus files may contain sensitive personal material — keep them under `docs/CORPUS/raw/` (gitignored); review before any explicit add.
 
 ## Supported versions
 

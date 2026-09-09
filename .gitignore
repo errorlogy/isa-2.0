@@ -12,6 +12,8 @@ Thumbs.db
 *.pem
 credentials.json
 secrets/
+settings.local
+*.local
 
 # Large corpus drafts (upload intentionally via LFS or explicit add)
 docs/CORPUS/raw/

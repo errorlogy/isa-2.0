@@ -122,8 +122,7 @@ Summary JSON (local only, gitignored): `raw/.../results/v03_validation_summary.j
 
 | Field | Path |
 |-------|------|
-| Extracted root | `C:\Users\Public\ISA_2_0\docs\CORPUS\raw\dodeca12_eia_rnd_v0_3\dodeca12_eia_rnd_v0_3\` |
-| Repo-relative | [`docs/CORPUS/raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/`](raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/) |
+| Repo-relative (local only, gitignored) | [`docs/CORPUS/raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/`](raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/) |
 | README | [`raw/.../README.md`](raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/README.md) |
 | Build validation | [`raw/.../BUILD_VALIDATION.md`](raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/BUILD_VALIDATION.md) |
 | Formal model | [`raw/.../docs/FORMAL_MODEL.md`](raw/dodeca12_eia_rnd_v0_3/dodeca12_eia_rnd_v0_3/docs/FORMAL_MODEL.md) |

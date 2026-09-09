@@ -315,4 +315,4 @@ Certificate example refs (local raw): `NAMM-DODECA-SHEAF-001`, `NAMM-V03-VALIDAT
 
 ---
 
-*Artifact POSLEDNIY_ZAVET v0.1 · ISA 2.0 private corpus · 2026-08-28*
+*Artifact POSLEDNIY_ZAVET v0.1 · ISA 2.0 published corpus · 2026-08-28*
