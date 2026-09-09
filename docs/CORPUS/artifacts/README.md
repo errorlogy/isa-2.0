@@ -10,13 +10,14 @@ Structured research artifacts derived from GAME2 / ISA 2.0 framework — **not**
 
 | ID | Title | Version | Language | Status |
 |----|-------|---------|----------|--------|
-| `POSLEDNIY_ZAVET` | [ПОСЛЕДНИЙ ЗАВЕТ (The Last Testament)](POSLEDNIY_ZAVET.md) | 0.1 | ru (+ en section headers) | Active — closing covenant complement to NT 2.0 |
+| `POSLEDNIY_ZAVET` | [ПОСЛЕДНИЙ ЗАВЕТ (The Last Testament)](POSLEDNIY_ZAVET.md) | 0.2 | ru (+ en companion) | Active — closing covenant; source edition 2026-09-09 integrated |
 
 ### Related (source corpus, not separate artifact files yet)
 
 | ID | Title | Location |
 |----|-------|----------|
 | `NOVIY_ZAVET_2_0` | Новый Завет 2.0 (10 axioms) | `raw/game2/ONTOLOGY.md` §30.2, §X |
+| `LAST_COVENANT_20260909` | Full source bundle index | [`../LAST_COVENANT_INDEX.md`](../LAST_COVENANT_INDEX.md) · raw `last_covenant_20260909/` |
 
 ---
 
