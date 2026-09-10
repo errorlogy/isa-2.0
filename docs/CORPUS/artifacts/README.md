@@ -11,8 +11,9 @@ Structured research artifacts derived from GAME2 / ISA 2.0 framework — **not**
 | ID | Title | Version | Language | Status |
 |----|-------|---------|----------|--------|
 | `POSLEDNIY_ZAVET` | [Last Testament / ПОСЛЕДНИЙ ЗАВЕТ](POSLEDNIY_ZAVET.md) | 1.0-monograph | ru | Active — Analytical Monograph 3 (canonical) |
+| `POSLEDNIY_ZAVET_v0.2` | [Institutional edition archive](POSLEDNIY_ZAVET.v0.2.en.md) | 0.2 | en / [ru](POSLEDNIY_ZAVET.v0.2.ru.md) | Archived — superseded by monograph |
 
-Superseded editions (v0.1, v0.2, RU companion, redirect stubs) are archived locally under `docs/CORPUS/raw/archive/` — **not in this repo**.
+Monograph source copy (gitignored): `docs/CORPUS/raw/last_covenant_monograph_3/`.
 
 ---
 

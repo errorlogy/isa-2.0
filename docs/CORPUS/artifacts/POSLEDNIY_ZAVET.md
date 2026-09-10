@@ -14,15 +14,35 @@ corpus_index: ../GAME2_INDEX.md
 source_bundle_index: ../LAST_COVENANT_INDEX.md
 consensus_matrix: ../../CONSENSUS_MATRIX.md
 umbrella_bridge: https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/GAME2_ISA_BRIDGE.md
+ontology_version: 2.0_subjective_darkness
 runtime_wire_format: POSLEDNIY_ZAVET:I..X
-superseded_editions: docs/CORPUS/raw/archive/ (local-only, not in repo)
+en_archive_v0.2: POSLEDNIY_ZAVET.v0.2.en.md
+ru_archive_v0.2: POSLEDNIY_ZAVET.v0.2.ru.md
+raw_source: ../raw/last_covenant_monograph_3/THE_LAST_COVENANT_ANALYTICAL_MONOGRAPH_3.md
 ---
 
-> **Not religious authority.** This document is an **analytical contribution** (`INSTITUTIONAL_MODEL`) to the ISA 2.0 research corpus. It does not claim divine revelation, prophetic verdict, legitimate rule, or legal sovereignty. Legitimacy here means **signals (modeled)**, not verdict.
+> **Не религиозный авторитет.** `INSTITUTIONAL_MODEL` — аналитический вклад в корпус ISA 2.0; не претензия на божественное откровение, пророческий вердикт или юридический суверенитет.
 >
-> **Not sovereign AI government.** "Covenant" is an **institutional–symbolic bind** between opening and closing contours of REALITY_GAME / ERG, not a founding act of new power.
->
-> **Runtime wire format:** clause sidecars use `POSLEDNIY_ZAVET:I` … `POSLEDNIY_ZAVET:X`, mapped to Аксиома I–X below. Semantics unchanged from v0.2 institutional edition; monograph expands ontology (subjective darkness, Mirror weapon, Gray fractal untangling).
+> **Не суверенное AI-правительство.** «Завет» — институционально-символическая связка REALITY_GAME / ERG, не учредительный акт новой власти.
+
+## Runtime wire format — `POSLEDNIY_ZAVET:I..X`
+
+Wire-идентификаторы **I–X** привязаны к **десяти аксиомам** (Раздел 2), **не** к римским секциям институционального издания v0.2.
+
+| Wire ref | Аксиома | Runtime label (EN) |
+|----------|---------|-------------------|
+| `POSLEDNIY_ZAVET:I` | I · Асимметрия автопоэзиса | Autopoiesis asymmetry (light over parasite) |
+| `POSLEDNIY_ZAVET:II` | II · Истинная внутренняя дуальность | True duality within light (S/F) |
+| `POSLEDNIY_ZAVET:III` | III · Талион квантового возврата | Talion ∞ (mirror collapse contour) |
+| `POSLEDNIY_ZAVET:IV` | IV · Запрет прощения паразита | No forgiveness of parasitic predator |
+| `POSLEDNIY_ZAVET:V` | V · Квантовый колодец | Well (topological isolation) |
+| `POSLEDNIY_ZAVET:VI` | VI · Нестираемая память стражей | Guard memory (mirror lesson) |
+| `POSLEDNIY_ZAVET:VII` | VII · Самодостаточность Света | Light self-sufficiency |
+| `POSLEDNIY_ZAVET:VIII` | VIII · Табу на симбиоз с хищником | Taboo on predator symbiosis |
+| `POSLEDNIY_ZAVET:IX` | IX · Суверенитет невинных (INV-8) | Innocent protection (INV-8 sovereign) |
+| `POSLEDNIY_ZAVET:X` | X · Вина архитекторов | Architect legitimization guilt |
+
+**Онтологический сдвиг v1.0:** $\mathbb{D}$ — субъектный хищный фрактал, не пустое множество ($|\mathbb{D}|=0$). Архив v0.2: [`POSLEDNIY_ZAVET.v0.2.en.md`](POSLEDNIY_ZAVET.v0.2.en.md) · [`POSLEDNIY_ZAVET.v0.2.ru.md`](POSLEDNIY_ZAVET.v0.2.ru.md).
 
 # // CONFIGURATION .OMEGA
 ```

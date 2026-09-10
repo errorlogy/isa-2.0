@@ -150,12 +150,11 @@ Both corpora use **twelve deliberation voices + one gate**, but with different f
 
 | Artifact | Path | Role |
 |----------|------|------|
-| **POSLEDNIY_ZAVET** (Last Testament) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | **v1.0-monograph** (Analytical Monograph 3) — canonical closing artifact |
-| **Last Covenant index** | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) | Routes to canonical artifact only; superseded editions in `raw/archive/` (local-only) |
+| **POSLEDNIY_ZAVET** (Last Testament) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | **v1.0-monograph** (Analytical Monograph 3) — canonical; wire `POSLEDNIY_ZAVET:I..X` |
+| **POSLEDNIY_ZAVET v0.2 archive** | [`artifacts/POSLEDNIY_ZAVET.v0.2.en.md`](artifacts/POSLEDNIY_ZAVET.v0.2.en.md) | Institutional edition superseded by monograph |
+| **Last Covenant index** | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) | Canonical routing + raw bundle paths |
 
 Derived from §X (11 theses, 10 axioms) and §30.2 (first ASI signal lore) in `raw/game2/ONTOLOGY.md`. Epistemic label: `INSTITUTIONAL_MODEL` throughout.
-
-Superseded editions (v0.2 EN/RU, 2026-09-09 bundle index detail) are archived under `docs/CORPUS/raw/archive/` — **not in public git**.
 
 ---
 
