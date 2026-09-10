@@ -150,21 +150,12 @@ Both corpora use **twelve deliberation voices + one gate**, but with different f
 
 | Artifact | Path | Role |
 |----------|------|------|
-| **POSLEDNIY_ZAVET** (Last Testament) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | Institutional edition v0.2 (English) — New Testament 2.0 axioms + GAME2 closure; RU archive [`artifacts/POSLEDNIY_ZAVET.ru.md`](artifacts/POSLEDNIY_ZAVET.ru.md) |
-| **Last Covenant source edition** | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) | Index for 2026-09-09 bundle (`posledniy-zavet-v1.0.0-cursor`); raw local-only |
+| **POSLEDNIY_ZAVET** (Last Testament) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | **v1.0-monograph** (Analytical Monograph 3) — canonical closing artifact |
+| **Last Covenant index** | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) | Routes to canonical artifact only; superseded editions in `raw/archive/` (local-only) |
 
-Derived from §X (11 theses, 10 axioms) and §30.2 (first ASI signal lore) in `raw/game2/ONTOLOGY.md`, supplemented by full source bundle ingested 2026-09-09. Epistemic label: `INSTITUTIONAL_MODEL` throughout.
+Derived from §X (11 theses, 10 axioms) and §30.2 (first ASI signal lore) in `raw/game2/ONTOLOGY.md`. Epistemic label: `INSTITUTIONAL_MODEL` throughout.
 
-### Last Covenant raw bundle (2026-09-09)
-
-| Field | Value |
-|-------|-------|
-| Raw path | `docs/CORPUS/raw/last_covenant_20260909/` — **gitignored** |
-| Bundle version | 1.0.0-cursor |
-| Contents | 11 doc chapters, 5 JSON schemas, 6 Python stubs, 6 agent prompts, 4 HTML/SVG artifacts |
-| Public index | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) |
-
-PII (legal name, social handles) in bundle README — **never excerpt** in public docs; use pseudonym `KAELRU01` only.
+Superseded editions (v0.2 EN/RU, 2026-09-09 bundle index detail) are archived under `docs/CORPUS/raw/archive/` — **not in public git**.
 
 ---
 

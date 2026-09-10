@@ -17,6 +17,7 @@ settings.local
 
 # Large corpus drafts (upload intentionally via LFS or explicit add)
 docs/CORPUS/raw/
+docs/CORPUS/archive/
 docs/CORPUS/**/*.pdf
 docs/CORPUS/**/*.docx
 docs/MATH/raw/
