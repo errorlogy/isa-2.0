@@ -159,8 +159,8 @@ Tracked as research backlog; no runtime promotion without schema update.
 
 ## Related
 
-- Institutional edition: [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md)
-- English companion: [`artifacts/POSLEDNIY_ZAVET.en.md`](artifacts/POSLEDNIY_ZAVET.en.md)
+- Institutional edition (English): [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md)
+- Russian archive: [`artifacts/POSLEDNIY_ZAVET.ru.md`](artifacts/POSLEDNIY_ZAVET.ru.md)
 - GAME2 index: [`GAME2_INDEX.md`](GAME2_INDEX.md)
 - Umbrella bridge: [GAME2_ISA_BRIDGE.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/GAME2_ISA_BRIDGE.md)
 - Runtime sidecar: [POSLEDNIY_ZAVET_RUNTIME.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/POSLEDNIY_ZAVET_RUNTIME.md)

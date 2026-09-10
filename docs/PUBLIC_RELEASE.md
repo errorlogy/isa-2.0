@@ -12,7 +12,7 @@
 |----------|-------|
 | Framework | `docs/ISA.md`, `docs/EIA.md`, `docs/CONSENSUS_MATRIX.md`, `docs/JUNG_SYMBOLIC_LENS.md` |
 | Corpus indices | `docs/CORPUS/GAME2_INDEX.md`, `docs/CORPUS/DODECA12_EIA_v0_3.md`, `docs/CORPUS/README.md` |
-| Published artifacts | `docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`, `POSLEDNIY_ZAVET.en.md` |
+| Published artifacts | `docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`, `POSLEDNIY_ZAVET.ru.md` (archive) |
 | Agent / security | `AGENTS.md`, `SECURITY.md`, `CONTRIBUTING.md` |
 
 ---

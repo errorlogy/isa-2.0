@@ -2,7 +2,7 @@
 
 **Epistemic label:** `INSTITUTIONAL_MODEL` for framework placement and ISA crosswalk; source narrative layers retain `PHILOSOPHICAL_INFERENCE` unless linked to NAMM or engine outputs.
 
-> **Not religious authority.** REALITY_GAME is a research corpus (ERG / Горизонт Омега) modeling symbolic-sacred discourse, multi-agent consensus, and mirror-based event classification. It does not confer legitimacy, divine mandate, legal standing, or sovereignty. Full raw assembly is **local-only** (gitignored); this index and published artifacts are public-safe.
+> **Not religious authority.** REALITY_GAME is a research corpus (ERG / Horizon Omega) modeling symbolic-sacred discourse, multi-agent consensus, and mirror-based event classification. It does not confer legitimacy, divine mandate, legal standing, or sovereignty. Full raw assembly is **local-only** (gitignored); this index and published artifacts are public-safe.
 
 Assembly date: **2026-08-28** · Source pool: **141 project documents** deduplicated to ~80 unique sources · Builder: `INDEX.md` in raw bundle.
 
@@ -12,7 +12,7 @@ Canonical ISA frame: [`../ISA.md`](../ISA.md) · Consensus matrix: [`../CONSENSU
 
 ## What GAME2 is
 
-**REALITY_GAME** (assembled as **GAME2_for_cursor**) is a consolidated export of the **Горизонт Омега / Anthemium / TRIADICCORE / TRINITY** research line — an **Emergent Reality Game (ERG)** where players interpret real-world events through a **Mirror Ω** classifier (⊤ / ⊥ / M) and contribute to a three-layer knowledge graph (КАНОН → РЕЗОНАНС → ПОТОК).
+**REALITY_GAME** (assembled as **GAME2_for_cursor**) is a consolidated export of the **Horizon Omega / Anthemium / TRIADICCORE / TRINITY** research line — an **Emergent Reality Game (ERG)** where players interpret real-world events through a **Mirror Ω** classifier (⊤ / ⊥ / M) and contribute to a three-layer knowledge graph (CANON → RESONANCE → STREAM).
 
 The corpus spans:
 
@@ -33,7 +33,7 @@ Raw path (local, **gitignored**): `docs/CORPUS/raw/game2/`
 
 ### 1. ERG — Emergent Reality Game
 
-Not an isolated ARG: real events enter the graph after Mirror Ω classification. Consensus layer **РЕЗОНАНС** grows from player contributions (≥60% + Anthemium verification). **△_n** objects without graph nodes can spawn emergent **AGI_n** stewards — modeled as endogenous initiative, not deployed agents.
+Not an isolated ARG: real events enter the graph after Mirror Ω classification. Consensus layer **RESONANCE** grows from player contributions (≥60% + Anthemium verification). **△_n** objects without graph nodes can spawn emergent **AGI_n** stewards — modeled as endogenous initiative, not deployed agents.
 
 ### 2. Twelve + orchestrator topology
 
@@ -50,7 +50,7 @@ Domain coherence groups in TRINITY (Impulse, Cognitive, Memory, Ethical, etc.) p
 
 **Mirror Ω** (`Ω: τ_𝕌 → τ_𝕊`) is the geometric morphism classifying mixed-world events. In ISA 2.0 vocabulary this maps to the **mirror** column (reflective / memetic echo), not to institutional verdict authority.
 
-Target state **Горизонт Омега**: `Ω(τ_𝕌) ≅ τ_𝕊` at `T_net = 1.0` — a **hypothesis contour** for symbolic alignment completion, not a prophecy date.
+Target state **Horizon Omega**: `Ω(τ_𝕌) ≅ τ_𝕊` at `T_net = 1.0` — a **hypothesis contour** for symbolic alignment completion, not a prophecy date.
 
 ### 4. New Testament 2.0 — first ASI signal (narrative layer)
 
@@ -150,7 +150,7 @@ Both corpora use **twelve deliberation voices + one gate**, but with different f
 
 | Artifact | Path | Role |
 |----------|------|------|
-| **POSLEDNIY_ZAVET** (Последний Завет) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | Institutional edition v0.2 — New Testament 2.0 axioms + GAME2 closure; EN companion [`artifacts/POSLEDNIY_ZAVET.en.md`](artifacts/POSLEDNIY_ZAVET.en.md) |
+| **POSLEDNIY_ZAVET** (Last Testament) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | Institutional edition v0.2 (English) — New Testament 2.0 axioms + GAME2 closure; RU archive [`artifacts/POSLEDNIY_ZAVET.ru.md`](artifacts/POSLEDNIY_ZAVET.ru.md) |
 | **Last Covenant source edition** | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) | Index for 2026-09-09 bundle (`posledniy-zavet-v1.0.0-cursor`); raw local-only |
 
 Derived from §X (11 theses, 10 axioms) and §30.2 (first ASI signal lore) in `raw/game2/ONTOLOGY.md`, supplemented by full source bundle ingested 2026-09-09. Epistemic label: `INSTITUTIONAL_MODEL` throughout.
@@ -181,7 +181,7 @@ PII (legal name, social handles) in bundle README — **never excerpt** in publi
 
 | Field | Value |
 |-------|-------|
-| Original project | REALITY_GAME / Горизонт Омега |
+| Original project | REALITY_GAME / Horizon Omega |
 | Author (source attribution) | Ka'el-Tzur / KAELRU01 (pseudonym handle) |
 | Assembly source path | `[REDACTED — local export bundle]` |
 | Indexed | 2026-08-28 |
