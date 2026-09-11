@@ -6,7 +6,7 @@ language: en
 framework: ISA_2.0
 version: 0.2
 status: archived
-superseded_by: POSLEDNIY_ZAVET.md
+superseded_by: NEO_ERA.md
 superseded_version: 1.0-monograph
 source_edition: last_covenant_20260909
 related_artifacts:
@@ -43,7 +43,7 @@ See also: [`GAME2_INDEX.md`](../GAME2_INDEX.md) ┬╖ [`LAST_COVENANT_INDEX.md`
 
 **v0.2 (2026-09-09):** integrated full source package `posledniy-zavet-v1.0.0-cursor` тАФ 11 specification chapters, JSON schemas, INV-1..8, agent prompts (local raw). Institutional frame preserved; full source text not duplicated.
 
-Russian archive: [`POSLEDNIY_ZAVET.ru.md`](POSLEDNIY_ZAVET.ru.md).
+Russian sidecar: [`NEO_ERA.ru.md`](NEO_ERA.ru.md).
 
 ---
 
@@ -344,7 +344,7 @@ Full package `posledniy-zavet-v1.0.0-cursor` ingested at `docs/CORPUS/raw/last_c
 | `10_GAME_DESIGN` | ┬зIV тАФ ERG mechanics | `INSTITUTIONAL_MODEL` |
 | `11_NEXUS_ROLE` | ┬зIII.2, ┬зV тАФ Nexus bridge, apostle-guards | `PHILOSOPHICAL_INFERENCE` |
 
-**Machine-readable:** `schema/axioms.json` (dependency graph), `schema/entities.json`, `schema/topos.json`, `schema/glyphs.json` тАФ local raw; clause IDs IтАУX match runtime sidecar in umbrella [`POSLEDNIY_ZAVET_RUNTIME.md`](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/POSLEDNIY_ZAVET_RUNTIME.md). **No new clause IDs** beyond IтАУX; runtime registry unchanged.
+**Machine-readable:** `schema/axioms.json` (dependency graph), `schema/entities.json`, `schema/topos.json`, `schema/glyphs.json` тАФ local raw; clause IDs IтАУX match runtime sidecar in umbrella [`NEO_ERA_RUNTIME.md`](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/NEO_ERA_RUNTIME.md). **No new clause IDs** beyond IтАУX; runtime registry unchanged.
 
 **Computational stubs** (`src/*.py`): document-only in isa-2.0; promotion requires child-repo schema bump, not umbrella copy.
 
@@ -356,7 +356,7 @@ Full package `posledniy-zavet-v1.0.0-cursor` ingested at `docs/CORPUS/raw/last_c
 |----------|------|
 | GAME2 index | [`../GAME2_INDEX.md`](../GAME2_INDEX.md) |
 | Last Covenant source index | [`../LAST_COVENANT_INDEX.md`](../LAST_COVENANT_INDEX.md) |
-| Russian archive | [`POSLEDNIY_ZAVET.ru.md`](POSLEDNIY_ZAVET.ru.md) |
+| Russian sidecar | [`NEO_ERA.ru.md`](NEO_ERA.ru.md) |
 | ISA 2.0 framework | [`../../ISA.md`](../../ISA.md) |
 | Consensus matrix | [`../../CONSENSUS_MATRIX.md`](../../CONSENSUS_MATRIX.md) |
 | DODECA-12 EIA | [`../DODECA12_EIA_v0_3.md`](../DODECA12_EIA_v0_3.md) |

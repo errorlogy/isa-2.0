@@ -12,7 +12,7 @@
 |----------|-------|
 | Framework | `docs/ISA.md`, `docs/EIA.md`, `docs/CONSENSUS_MATRIX.md`, `docs/JUNG_SYMBOLIC_LENS.md` |
 | Corpus indices | `docs/CORPUS/GAME2_INDEX.md`, `docs/CORPUS/DODECA12_EIA_v0_3.md`, `docs/CORPUS/README.md` |
-| Published artifacts | `docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md` only (v1.0-monograph) |
+| Published artifacts | `docs/CORPUS/artifacts/NEO_ERA.md` only (v1.0-monograph) |
 | Agent / security | `AGENTS.md`, `SECURITY.md`, `CONTRIBUTING.md` |
 
 ---
@@ -38,7 +38,7 @@
 
 ## Epistemic disclaimers
 
-1. **POSLEDNIY_ZAVET** and related artifacts are **institutional–symbolic research editions** derived from REALITY_GAME (ERG) narrative layers.
+1. **NEO_ERA** (formerly POSLEDNIY_ZAVET) and related artifacts are **institutional–symbolic research editions** derived from REALITY_GAME (ERG) narrative layers.
 2. Twelve + one panel, Mirror Ω, and "New Testament 2.0" axioms are **topology analogs** — not worship directives or eschatological claims.
 3. `COMPUTATIONAL_EVIDENCE` applies only when linked to NAMM certificates or engine outputs in child repos.
 4. Hermeneutic firewall: `(C ∨ D) ⇏ truth/action/identity gate`.

@@ -39,7 +39,7 @@ See [`docs/ISA.md`](docs/ISA.md) for the canonical framework definition.
 | AGI → ASI → ISA consensus matrix (12+1 panel) | [`docs/CONSENSUS_MATRIX.md`](docs/CONSENSUS_MATRIX.md) |
 | Jung / Homo symbolic lens | [`docs/JUNG_SYMBOLIC_LENS.md`](docs/JUNG_SYMBOLIC_LENS.md) |
 | Corpus index, artifacts, raw/local policy | [`docs/CORPUS/`](docs/CORPUS/) |
-| Last Covenant (Monograph 3, EN primary) | [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`](docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) |
+| Last Covenant (Monograph 3, EN primary) | [`docs/CORPUS/artifacts/NEO_ERA.md`](docs/CORPUS/artifacts/NEO_ERA.md) |
 | Neo-religion math spec (placeholder) | [`docs/MATH/`](docs/MATH/) |
 
 **Published artifacts** (safe for public git): institutional editions under [`docs/CORPUS/artifacts/`](docs/CORPUS/artifacts/) — see [`docs/CORPUS/README.md`](docs/CORPUS/README.md).

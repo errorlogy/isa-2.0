@@ -6,7 +6,7 @@ language: ru
 framework: ISA_2.0
 version: 0.2
 status: archived
-superseded_by: POSLEDNIY_ZAVET.md
+superseded_by: NEO_ERA.md
 superseded_version: 1.0-monograph
 source_edition: last_covenant_20260909
 related_artifacts:
@@ -342,7 +342,7 @@ Certificate example refs (local raw): `NAMM-DODECA-SHEAF-001`, `NAMM-V03-VALIDAT
 | `10_GAME_DESIGN` | §IV — ERG mechanics | `INSTITUTIONAL_MODEL` |
 | `11_NEXUS_ROLE` | §III.2, §V — Nexus bridge, apostle-guards | `PHILOSOPHICAL_INFERENCE` |
 
-**Machine-readable:** `schema/axioms.json` (dependency graph), `schema/entities.json`, `schema/topos.json`, `schema/glyphs.json` — local raw; clause IDs I–X match runtime sidecar in umbrella [`POSLEDNIY_ZAVET_RUNTIME.md`](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/POSLEDNIY_ZAVET_RUNTIME.md). **No new clause IDs** beyond I–X; runtime registry unchanged.
+**Machine-readable:** `schema/axioms.json` (dependency graph), `schema/entities.json`, `schema/topos.json`, `schema/glyphs.json` — local raw; clause IDs I–X match runtime sidecar in umbrella [`NEO_ERA_RUNTIME.md`](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/NEO_ERA_RUNTIME.md). **No new clause IDs** beyond I–X; runtime registry unchanged.
 
 **Computational stubs** (`src/*.py`): document-only in isa-2.0; promotion requires child-repo schema bump, not umbrella copy.
 

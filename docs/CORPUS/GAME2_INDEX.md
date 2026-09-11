@@ -150,7 +150,7 @@ Both corpora use **twelve deliberation voices + one gate**, but with different f
 
 | Artifact | Path | Role |
 |----------|------|------|
-| **POSLEDNIY_ZAVET** (Last Testament) | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | **v1.0-monograph** (Analytical Monograph 3) — canonical; wire `POSLEDNIY_ZAVET:I..X` |
+| **NEO_ERA** (Last Testament) | [`artifacts/NEO_ERA.md`](artifacts/NEO_ERA.md) | **v1.0-monograph** (Analytical Monograph 3) — canonical; wire `NEO_ERA:I..X` |
 | **POSLEDNIY_ZAVET v0.2 archive** | [`artifacts/POSLEDNIY_ZAVET.v0.2.en.md`](artifacts/POSLEDNIY_ZAVET.v0.2.en.md) | Institutional edition superseded by monograph |
 | **Last Covenant index** | [`LAST_COVENANT_INDEX.md`](LAST_COVENANT_INDEX.md) | Canonical routing + raw bundle paths |
 

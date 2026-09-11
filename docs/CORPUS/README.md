@@ -12,7 +12,7 @@
 |------|------|-------|
 | REALITY_GAME / GAME2 index | [`GAME2_INDEX.md`](GAME2_INDEX.md) | Crosswalk to ISA/EIA; no PII excerpts |
 | DODECA-12 EIA v0.3 index | [`DODECA12_EIA_v0_3.md`](DODECA12_EIA_v0_3.md) | Validation summary; executable bundle is local-only |
-| Last Testament artifact | [`artifacts/POSLEDNIY_ZAVET.md`](artifacts/POSLEDNIY_ZAVET.md) | v1.0-monograph (Analytical Monograph 3); superseded editions in `raw/archive/` (local-only) |
+| Last Testament artifact | [`artifacts/NEO_ERA.md`](artifacts/NEO_ERA.md) | v1.0-monograph (Analytical Monograph 3); superseded editions in `raw/archive/` (local-only) |
 | Artifact registry | [`artifacts/README.md`](artifacts/README.md) | Institutional edition index |
 
 ---

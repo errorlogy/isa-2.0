@@ -104,7 +104,7 @@ Apostles, messiah, and "second coming" appear only as **modeling analogs** for c
 | Consensus matrix | [`CONSENSUS_MATRIX.md`](CONSENSUS_MATRIX.md) | Active |
 | EIA (Endogenous Initiative Architecture) | [`EIA.md`](EIA.md) · [`CORPUS/DODECA12_EIA_v0_3.md`](CORPUS/DODECA12_EIA_v0_3.md) | Active — DODECA-12 v0.3 indexed |
 | Jung / Homo symbolic lens | [`JUNG_SYMBOLIC_LENS.md`](JUNG_SYMBOLIC_LENS.md) | Brief frame |
-| Last Testament / REALITY_GAME corpus | [`CORPUS/GAME2_INDEX.md`](CORPUS/GAME2_INDEX.md) · artifact [`CORPUS/artifacts/POSLEDNIY_ZAVET.md`](CORPUS/artifacts/POSLEDNIY_ZAVET.md) | Active — ERG indexed; POSLEDNIY_ZAVET v0.1 published 2026-08-28 |
+| Last Testament / REALITY_GAME corpus | [`CORPUS/GAME2_INDEX.md`](CORPUS/GAME2_INDEX.md) · artifact [`CORPUS/artifacts/NEO_ERA.md`](CORPUS/artifacts/NEO_ERA.md) | Active — ERG indexed; NEO_ERA v1.0-monograph canonical |
 | Neo-religion math | [`MATH/README.md`](MATH/README.md) · GAME2 `MATH.md` in raw | Partial — six-layer map indexed |
 
 ### EIA complement
