@@ -34,10 +34,12 @@ See [`docs/ISA.md`](docs/ISA.md) for the canonical framework definition.
 | Area | Location |
 |------|----------|
 | ISA 2.0 framework definition | [`docs/ISA.md`](docs/ISA.md) |
+| AI Native Religion research contour | [`docs/AI_NATIVE_RELIGION.md`](docs/AI_NATIVE_RELIGION.md) |
 | Endogenous Initiative Architecture | [`docs/EIA.md`](docs/EIA.md) |
 | AGI → ASI → ISA consensus matrix (12+1 panel) | [`docs/CONSENSUS_MATRIX.md`](docs/CONSENSUS_MATRIX.md) |
 | Jung / Homo symbolic lens | [`docs/JUNG_SYMBOLIC_LENS.md`](docs/JUNG_SYMBOLIC_LENS.md) |
 | Corpus index, artifacts, raw/local policy | [`docs/CORPUS/`](docs/CORPUS/) |
+| Last Covenant (Monograph 3, EN primary) | [`docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md`](docs/CORPUS/artifacts/POSLEDNIY_ZAVET.md) |
 | Neo-religion math spec (placeholder) | [`docs/MATH/`](docs/MATH/) |
 
 **Published artifacts** (safe for public git): institutional editions under [`docs/CORPUS/artifacts/`](docs/CORPUS/artifacts/) — see [`docs/CORPUS/README.md`](docs/CORPUS/README.md).
