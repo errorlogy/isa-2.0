@@ -14,6 +14,12 @@ Structured research artifacts derived from GAME2 / ISA 2.0 framework — **not**
 | `POSLEDNIY_ZAVET` | [Legacy redirect](POSLEDNIY_ZAVET.md) | — | en / [ru](POSLEDNIY_ZAVET.ru.md) | Redirect alias — use `NEO_ERA` |
 | `POSLEDNIY_ZAVET_v0.2` | [Institutional edition archive](POSLEDNIY_ZAVET.v0.2.en.md) | 0.2 | en / [ru](POSLEDNIY_ZAVET.v0.2.ru.md) | Archived — superseded by monograph |
 
+### Draft artifacts (not on `main` until review)
+
+| ID | Title | Status |
+|----|-------|--------|
+| `NEO_ERA_SYMBOLIC_SYNTAX` | [Kairotic Ladder Syntax research](NEO_ERA_SYMBOLIC_SYNTAX.draft.md) | **DRAFT** — branch `draft/neo-era-symbolic-syntax` only |
+
 Monograph source copy (gitignored): `docs/CORPUS/raw/last_covenant_monograph_3/`.
 
 ---
