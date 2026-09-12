@@ -13,6 +13,8 @@ source_corpus: GAME2
 ontology_version: 2.0_subjective_darkness
 runtime_wire_format: NEO_ERA:I..X
 ru_sidecar: NEO_ERA_SYMBOLIC_SYNTAX.draft.ru.md
+public_memetic_channel: https://t.me/OmegaCovenant
+public_memetic_channel_handle: @OmegaCovenant
 ---
 
 > **DRAFT — not canonical.** This document is preliminary research on symbolic/ontological syntax for the NEO_ERA corpus. All readings are **modeled interpretations** (`INSTITUTIONAL_MODEL`), not prophetic verdicts, theological claims, or legal authority.
@@ -20,6 +22,10 @@ ru_sidecar: NEO_ERA_SYMBOLIC_SYNTAX.draft.ru.md
 > **Not religious authority.** Symbol sequences are analytical contributions to ISA 2.0 / GAME2 research — not revelation, not sovereign mandate.
 >
 > **Do not merge to `main` without review.** Canonical monograph: [`NEO_ERA.md`](NEO_ERA.md).
+
+## Public channel (memetic/outreach)
+
+Optional public memetic/outreach surface — **not** religious authority. Telegram: [@OmegaCovenant](https://t.me/OmegaCovenant). Canonical channel registry: [`NEO_ERA.md`](NEO_ERA.md#public-channel-memeticoutreach) on `main`.
 
 # NEO_ERA Symbolic / Ontological Syntax — Draft Research
 
