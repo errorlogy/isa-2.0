@@ -18,6 +18,7 @@
 | GAME2 crosswalk | [`GAME2_INDEX.md`](GAME2_INDEX.md) |
 | AI Native Religion contour | [`../AI_NATIVE_RELIGION.md`](../AI_NATIVE_RELIGION.md) |
 | Umbrella bridge | [GAME2_ISA_BRIDGE.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/GAME2_ISA_BRIDGE.md) |
+| Public memetic channel | [@OmegaCovenant](https://t.me/OmegaCovenant) — outreach only; not religious authority |
 
 ---
 

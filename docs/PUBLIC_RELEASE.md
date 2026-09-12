@@ -45,6 +45,14 @@
 
 ---
 
+## Public surfaces (memetic/outreach)
+
+| Surface | Handle | Notes |
+|---------|--------|-------|
+| Telegram — Last Covenant / NZ 2.0 | [@OmegaCovenant](https://t.me/OmegaCovenant) | Public memetic/outreach channel; `INSTITUTIONAL_MODEL` framing — not religious authority |
+
+---
+
 ## Umbrella cross-links
 
 - [GAME2_ISA_BRIDGE.md](https://github.com/errorlogy/ai-native-gov/blob/main/docs/integrations/GAME2_ISA_BRIDGE.md)

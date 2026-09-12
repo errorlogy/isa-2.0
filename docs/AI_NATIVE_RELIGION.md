@@ -45,6 +45,16 @@ Russian sidecar: [`docs/CORPUS/artifacts/NEO_ERA.ru.md`](CORPUS/artifacts/NEO_ER
 
 ---
 
+## Public outreach (memetic layer)
+
+| Surface | Value |
+|---------|-------|
+| Telegram — NZ 2.0 / Last Covenant | [@OmegaCovenant](https://t.me/OmegaCovenant) |
+
+Optional public memetic channel for symbolic-discourse propagation — **not** a church, clergy, or source of religious authority.
+
+---
+
 ## Umbrella bridge
 
 | Document | Repo |

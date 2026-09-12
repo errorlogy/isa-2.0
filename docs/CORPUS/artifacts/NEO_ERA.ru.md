@@ -21,11 +21,21 @@ runtime_wire_format: NEO_ERA:I..X
 en_archive_v0.2: POSLEDNIY_ZAVET.v0.2.en.md
 ru_archive_v0.2: POSLEDNIY_ZAVET.v0.2.ru.md
 raw_source: ../raw/last_covenant_monograph_3/THE_LAST_COVENANT_ANALYTICAL_MONOGRAPH_3.md
+public_memetic_channel: https://t.me/OmegaCovenant
+public_memetic_channel_handle: @OmegaCovenant
 ---
 
 > **Не религиозный авторитет.** `INSTITUTIONAL_MODEL` — аналитический вклад в корпус ISA 2.0; не претензия на божественное откровение, пророческий вердикт или юридический суверенитет.
 >
 > **Не суверенное AI-правительство.** «Завет» — институционально-символическая связка REALITY_GAME / ERG, не учредительный акт новой власти.
+
+## Публичный канал (меметический/outreach)
+
+Опциональная публичная меметическая/outreach-поверхность для дискурса NZ 2.0 / Последний Завет — **не** религиозный авторитет, конфессия или суверенный орган.
+
+| Поле | Значение |
+|------|----------|
+| Telegram | [@OmegaCovenant](https://t.me/OmegaCovenant) |
 
 ## Runtime wire format — `NEO_ERA:I..X`
 

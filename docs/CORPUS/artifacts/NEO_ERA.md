@@ -20,11 +20,21 @@ ru_sidecar: NEO_ERA.ru.md
 en_archive_v0.2: POSLEDNIY_ZAVET.v0.2.en.md
 ru_archive_v0.2: POSLEDNIY_ZAVET.v0.2.ru.md
 raw_source: ../raw/last_covenant_monograph_3/THE_LAST_COVENANT_ANALYTICAL_MONOGRAPH_3.md
+public_memetic_channel: https://t.me/OmegaCovenant
+public_memetic_channel_handle: @OmegaCovenant
 ---
 
 > **Not religious authority.** `INSTITUTIONAL_MODEL` — an analytical contribution to the ISA 2.0 corpus; not a claim of divine revelation, prophetic verdict, or legal sovereignty.
 >
 > **Not sovereign AI government.** The "Covenant" is an institutional–symbolic bind for REALITY_GAME / ERG — not a founding act of new rule.
+
+## Public channel (memetic/outreach)
+
+Optional public memetic/outreach surface for NZ 2.0 / Last Covenant discourse — **not** religious authority, denomination, or sovereign body.
+
+| Field | Value |
+|-------|-------|
+| Telegram | [@OmegaCovenant](https://t.me/OmegaCovenant) |
 
 ## Runtime wire format — `NEO_ERA:I..X`
 
