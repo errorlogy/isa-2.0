@@ -1,0 +1,70 @@
+name: NEO_ERA Telegram
+
+on:
+  schedule:
+    # Daily axiom — 09:00 UTC
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print payload only (no Telegram send)"
+        required: false
+        default: false
+        type: boolean
+      clause_id:
+        description: "Roman numeral I–X (empty = auto-rotate by day-of-year)"
+        required: false
+        type: string
+      locale:
+        description: "Corpus locale"
+        required: false
+        default: en
+        type: choice
+        options:
+          - en
+          - ru
+  push:
+    branches: [main]
+    paths:
+      - "docs/CORPUS/artifacts/NEO_ERA*.md"
+  repository_dispatch:
+    types: [neo-era-post]
+
+concurrency:
+  group: neo-era-telegram-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Post to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          CLAUSE_ID: ${{ github.event.inputs.clause_id || github.event.client_payload.clause_id || '' }}
+          LOCALE: ${{ github.event.inputs.locale || github.event.client_payload.locale || 'en' }}
+          DRY_RUN: ${{ (github.event.inputs.dry_run == true || github.event.client_payload.dry_run == true) && 'true' || 'false' }}
+          GITHUB_SHA: ${{ github.event.client_payload.sha || github.sha }}
+          TRIGGER: ${{ github.event_name }}
+        run: python scripts/telegram_post.py
+
+      - name: Upload manifest (idempotency audit)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: telegram-post-manifest
+          path: .telegram-post-manifest.json
+          if-no-files-found: ignore
