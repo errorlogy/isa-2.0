@@ -1,16 +1,24 @@
 # NEO_ERA content-version workflow — importable Dify App DSL
 # Contract: docs/DIFY_SETUP.md · consumer: scripts/dify_client.py
 #
+# MODELS ARE INTENTIONALLY UNSET (provider/name empty strings).
+# Dify tenants expose different model catalogs (e.g. 59 models on one workspace,
+# gemini-1.5-flash only on another). Pinning one model id in YAML causes
+# «Несовместимо» / Incompatible on import — this is expected until you select
+# a model in the UI. Not a bug.
+#
 # Before import:
-#   1. Settings → Model Provider → add Google Gemini
+#   1. Settings → Model Provider → add Google Gemini (or your preferred LLM vendor)
 #   2. Replace __NEO_ERA_DATASET_ID__ with your NEO_ERA knowledge base UUID
 #      (or run scripts/dify_bootstrap.py to create/upload and patch automatically)
 #
-# After import:
-#   1. Open each LLM node → confirm Gemini model (gemini-2.0-flash or gemini-1.5-flash)
-#   2. Publish workflow
-#   3. Copy App API key → DIFY_API_KEY
-#   4. Copy published workflow version UUID → DIFY_WORKFLOW_ID
+# After import (required — workflow will not run until done):
+#   1. Open Caption Writer + Image Prompt Writer LLM nodes
+#   2. Model → pick ANY Gemini (or equivalent) from YOUR workspace list
+#      (e.g. gemini-2.0-flash, gemini-1.5-flash, gemini-2.5-flash — whatever you have)
+#   3. Save workflow → Publish
+#   4. Copy App API key → DIFY_API_KEY
+#   5. Copy published workflow version UUID → DIFY_WORKFLOW_ID
 
 version: "0.6.0"
 kind: app
@@ -190,8 +198,8 @@ workflow:
           title: Caption Writer
           desc: "HTML caption for Telegram sendPhoto"
           model:
-            provider: langgenius/gemini/google
-            name: gemini-2.0-flash
+            provider: ""
+            name: ""
             mode: chat
             completion_params:
               temperature: 0.4
@@ -257,8 +265,8 @@ workflow:
           title: Image Prompt Writer
           desc: "English FLUX prompt — no text in image"
           model:
-            provider: langgenius/gemini/google
-            name: gemini-2.0-flash
+            provider: ""
+            name: ""
             mode: chat
             completion_params:
               temperature: 0.5

@@ -21,6 +21,14 @@ There is **no official Dify CLI** for workflow import. Use UI import or `scripts
 
 ---
 
+## Why the DSL does not pin a model
+
+Each Dify workspace exposes a **tenant-specific model catalog** (plugin versions, region, API keys). A hardcoded `gemini-1.5-flash` or `gemini-2.0-flash` in YAML imports as **Incompatible** («Несовместимо») when that exact id is missing from *your* list.
+
+The DSL therefore ships LLM nodes with `provider: ""` and `name: ""` (empty strings — valid per Dify DSL 0.6.0). **Post-import model selection in the UI is intentional**, not a bug. Pick any Gemini (or equivalent) from **your** dropdown.
+
+---
+
 ## Option A — One-click UI import (recommended first try)
 
 1. **Knowledge** → create `NEO_ERA` → upload `docs/CORPUS/artifacts/NEO_ERA.md` (+ optional `.ru.md`).
@@ -28,7 +36,10 @@ There is **no official Dify CLI** for workflow import. Use UI import or `scripts
 3. Open `neo-era-content-workflow.dsl.yml` → replace `__NEO_ERA_DATASET_ID__` with that UUID.
 4. Dify Studio → **Import DSL** → select the YAML file.
 5. **Settings → Model Provider → Google Gemini** (if not already).
-6. Open each LLM node → confirm model (`gemini-2.0-flash` or `gemini-1.5-flash`).
+6. **Post-import checklist (required):**
+   - Open **Caption Writer** → Model → select any Gemini from **your** list (e.g. `gemini-2.0-flash`, `gemini-1.5-flash`, or whatever appears).
+   - Repeat for **Image Prompt Writer**.
+   - **Save** workflow → confirm both nodes still show a model (not «Несовместимо»).
 7. **Publish** → **API Access** → create App API key → `DIFY_API_KEY`.
 8. **Version history** → copy published version UUID → `DIFY_WORKFLOW_ID`.
 
@@ -64,7 +75,7 @@ The script will attempt to:
 2. Patch `__NEO_ERA_DATASET_ID__` in the DSL.
 3. Import the workflow via Console API.
 
-You still **manually**: confirm import in UI (if prompted), assign Gemini on LLM nodes, **Publish**, copy `DIFY_API_KEY` + `DIFY_WORKFLOW_ID`.
+You still **manually**: confirm import in UI (if prompted), **select a model on both LLM nodes** (from your tenant catalog), **Publish**, copy `DIFY_API_KEY` + `DIFY_WORKFLOW_ID`.
 
 See `python scripts/dify_bootstrap.py --help` for flags and limitations.
 

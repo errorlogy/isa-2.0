@@ -13,11 +13,13 @@ Pipeline context: [NEO_ERA Telegram pipeline (umbrella draft)](https://github.co
 **Fast path:** import [docs/dify/neo-era-content-workflow.dsl.yml](dify/neo-era-content-workflow.dsl.yml) (see [docs/dify/README.md](dify/README.md)) or run `python scripts/dify_bootstrap.py` with Console + Knowledge API credentials.
 
 1. **Knowledge** → upload `docs/CORPUS/artifacts/NEO_ERA.md` (+ optional `.ru.md`)
-2. **Import DSL** or build workflow manually (not Chatbot) → **Publish**
-3. **API Access** → copy **App API key** (`app-…`) → GitHub secret `DIFY_API_KEY`
-4. **Version history** → copy **published workflow version ID** (UUID) → GitHub secret `DIFY_WORKFLOW_ID`
-5. **Test:** `gh workflow run neo-era-content-version.yml -f dry_run=true`
-6. Add `FAL_KEY` (optional) → live post with `dry_run=false`
+2. **Import DSL** or build workflow manually (not Chatbot)
+3. **Post-import:** open **Caption Writer** + **Image Prompt Writer** → pick any Gemini from **your** workspace model list (DSL ships empty `provider`/`name` on purpose — see [§9](#9-gemini-model-selection-in-llm-nodes))
+4. **Save** → **Publish**
+5. **API Access** → copy **App API key** (`app-…`) → GitHub secret `DIFY_API_KEY`
+6. **Version history** → copy **published workflow version ID** (UUID) → GitHub secret `DIFY_WORKFLOW_ID`
+7. **Test:** `gh workflow run neo-era-content-version.yml -f dry_run=true`
+8. Add `FAL_KEY` (optional) → live post with `dry_run=false`
 
 ---
 
@@ -207,7 +209,7 @@ Dify supports **App DSL** import/export (YAML). This repo ships a ready-made fil
 - [docs/dify/README.md](dify/README.md) — import steps and API limitations
 - [scripts/dify_bootstrap.py](../scripts/dify_bootstrap.py) — partial automation (Knowledge API + Console import)
 
-Replace `__NEO_ERA_DATASET_ID__` in the DSL with your knowledge base UUID before import (bootstrap script patches this automatically).
+Replace `__NEO_ERA_DATASET_ID__` in the DSL with your knowledge base UUID before import (bootstrap script patches this automatically). **Do not** edit `model.provider` / `model.name` in the YAML — select the model in the UI after import (tenant catalogs differ).
 
 Structural reference (not importable):
 
@@ -219,8 +221,8 @@ Structural reference (not importable):
   "nodes": [
     {"id": "start", "type": "start"},
     {"id": "kb", "type": "knowledge-retrieval", "dataset": "NEO_ERA", "query": "{{aspect}} {{locale}}"},
-    {"id": "caption", "type": "llm", "model": "gemini-2.0-flash", "output": "caption_html"},
-    {"id": "image_prompt", "type": "llm", "model": "gemini-2.0-flash", "output": "image_prompt"},
+    {"id": "caption", "type": "llm", "model": "<select in UI after import>", "output": "caption_html"},
+    {"id": "image_prompt", "type": "llm", "model": "<select in UI after import>", "output": "image_prompt"},
     {"id": "end", "type": "end"}
   ]
 }
@@ -334,21 +336,64 @@ Or use the main workflow with `mode: content-version`:
 
 ## 9. Gemini model selection in LLM nodes
 
-You connected Gemini via **Settings → Model Provider → Google** in Dify. In each **LLM node**:
+### Why the DSL does not pin one model
 
-| Node | Recommended model | Why |
-|------|-------------------|-----|
-| Caption Writer | `gemini-2.0-flash` or `gemini-1.5-flash` | Fast, good HTML; captions are short |
-| Image Prompt Writer | `gemini-2.0-flash` | Creative but structured output |
-| Aspect Picker (optional) | `gemini-2.0-flash` | Classification / light reasoning |
-| Long Text (optional) | `gemini-1.5-pro` or `gemini-2.0-flash` | Longer context if needed |
+Dify workspaces expose **different model catalogs** (plugin version, region, provider keys). One tenant may list 59 models; another only `gemini-1.5-flash`. Hardcoding `gemini-2.0-flash` or `gemini-1.5-flash` in YAML causes **Incompatible** («Несовместимо») on import when that id is absent.
 
-Settings per LLM node:
+The shipped DSL uses **empty** `provider` and `name` (valid Dify DSL 0.6.0 pattern). **You must select a model in the UI after import** — this is intentional, not a bug.
+
+### Post-import checklist
+
+1. **Settings → Model Provider → Google** → add Gemini API key (if not done).
+2. Open workflow → **Caption Writer** → **Model** → pick **any Gemini** from **your** dropdown.
+3. Repeat for **Image Prompt Writer**.
+4. **Save** workflow → **Publish** → test run in Studio.
+5. Copy new **Version history** UUID → `DIFY_WORKFLOW_ID`.
+
+| Node | Suggested model (if available) | Why |
+|------|------------------------------|-----|
+| Caption Writer | Any fast Gemini flash variant | Short HTML captions |
+| Image Prompt Writer | Same or any flash variant | Structured creative output |
+| Aspect Picker (optional) | Any flash variant | Light classification |
+| Long Text (optional) | `gemini-1.5-pro` or flash | Longer context if needed |
+
+Settings per LLM node (already in DSL `completion_params`):
 - **Temperature:** 0.3–0.5 (lower = more consistent epistemic tone)
 - **Max tokens:** 1024 for caption, 512 for image prompt
-- Enable **Knowledge** context from the retrieval node (pass `result` into user prompt)
+- Enable **Knowledge** context from the retrieval node on Caption Writer (pass `result` into prompt)
 
-If `gemini-2.0-flash` is unavailable in your Dify region, use `gemini-1.5-flash` — the contract is model-agnostic.
+The runtime contract is **model-agnostic** — any configured chat LLM with the same prompts works.
+
+### Troubleshooting: model shows «Несовместимо» / selection does not persist
+
+**Symptom:** After DSL import, LLM nodes show **Incompatible** or model resets after reload.
+
+**Expected after import:** Empty model fields show as “select model” / incompatible until you pick one from your catalog.
+
+**Fix (UI — try in order):**
+
+1. **Settings → Model Provider → Google** → add/verify API key → **Save** → confirm models list loads.
+2. **Settings → Plugins** → **Gemini** plugin → update to latest stable (Cloud: 0.1.5+ per [dify#18394](https://github.com/langgenius/dify/issues/18394)).
+3. Open workflow → **Caption Writer** → **Model** → **Google** → choose any model from **your** list.
+4. Repeat for **Image Prompt Writer** → **Save** workflow → **Publish**.
+5. Hard-refresh (`Ctrl+Shift+R`) → confirm model names persist → test run → update `DIFY_WORKFLOW_ID`.
+
+**If still incompatible:**
+
+| Option | Steps |
+|--------|--------|
+| **Recreate nodes** | Delete LLM node → add new **LLM** → paste prompts from [neo-era-content-workflow.dsl.yml](dify/neo-era-content-workflow.dsl.yml) → reconnect edges → select model → Save → Publish. |
+| **Re-import DSL** | Replace `__NEO_ERA_DATASET_ID__` → **Import DSL** → select models in UI (do not hardcode model ids in YAML) → Publish. |
+| **Browser** | Try Chrome/Edge; disable ad-block on `cloud.dify.ai`; confirm **Saved** before leaving. |
+
+**DSL model fields** (shipped — do not replace with a specific model id):
+
+```yaml
+model:
+  provider: ""   # select Google (or other) in UI after import
+  name: ""       # pick any model from YOUR workspace catalog
+  mode: chat
+```
 
 ---
 
