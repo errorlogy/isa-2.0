@@ -10,8 +10,10 @@ Pipeline context: [NEO_ERA Telegram pipeline (umbrella draft)](https://github.co
 
 ## Quick checklist (after you have a Dify API key)
 
+**Fast path:** import [docs/dify/neo-era-content-workflow.dsl.yml](dify/neo-era-content-workflow.dsl.yml) (see [docs/dify/README.md](dify/README.md)) or run `python scripts/dify_bootstrap.py` with Console + Knowledge API credentials.
+
 1. **Knowledge** → upload `docs/CORPUS/artifacts/NEO_ERA.md` (+ optional `.ru.md`)
-2. **Create Workflow app** (not Chatbot) → build nodes below → **Publish**
+2. **Import DSL** or build workflow manually (not Chatbot) → **Publish**
 3. **API Access** → copy **App API key** (`app-…`) → GitHub secret `DIFY_API_KEY`
 4. **Version history** → copy **published workflow version ID** (UUID) → GitHub secret `DIFY_WORKFLOW_ID`
 5. **Test:** `gh workflow run neo-era-content-version.yml -f dry_run=true`
@@ -197,9 +199,17 @@ Constraints: no text, no logos, no faces of real people, no religious iconograph
 One paragraph, max 200 words.
 ```
 
-### Pseudo-export (workflow structure reference)
+### Importable DSL (preferred)
 
-Dify does not ship a portable YAML for workflows; this JSON is a **structural reference** only (not importable as-is):
+Dify supports **App DSL** import/export (YAML). This repo ships a ready-made file:
+
+- [docs/dify/neo-era-content-workflow.dsl.yml](dify/neo-era-content-workflow.dsl.yml) — import via Studio → **Import DSL**
+- [docs/dify/README.md](dify/README.md) — import steps and API limitations
+- [scripts/dify_bootstrap.py](../scripts/dify_bootstrap.py) — partial automation (Knowledge API + Console import)
+
+Replace `__NEO_ERA_DATASET_ID__` in the DSL with your knowledge base UUID before import (bootstrap script patches this automatically).
+
+Structural reference (not importable):
 
 ```json
 {

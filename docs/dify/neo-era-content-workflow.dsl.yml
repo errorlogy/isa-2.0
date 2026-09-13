@@ -1,0 +1,364 @@
+# NEO_ERA content-version workflow — importable Dify App DSL
+# Contract: docs/DIFY_SETUP.md · consumer: scripts/dify_client.py
+#
+# Before import:
+#   1. Settings → Model Provider → add Google Gemini
+#   2. Replace __NEO_ERA_DATASET_ID__ with your NEO_ERA knowledge base UUID
+#      (or run scripts/dify_bootstrap.py to create/upload and patch automatically)
+#
+# After import:
+#   1. Open each LLM node → confirm Gemini model (gemini-2.0-flash or gemini-1.5-flash)
+#   2. Publish workflow
+#   3. Copy App API key → DIFY_API_KEY
+#   4. Copy published workflow version UUID → DIFY_WORKFLOW_ID
+
+version: "0.6.0"
+kind: app
+app:
+  name: "NEO_ERA Content Version"
+  mode: workflow
+  icon: "\U0001F310"
+  icon_background: "#E8F4FD"
+  icon_type: emoji
+  description: "NEO_ERA Telegram content-version — RAG caption + image prompt (INSTITUTIONAL_MODEL)"
+  use_icon_as_answer_icon: false
+dependencies: []
+workflow:
+  environment_variables: []
+  conversation_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: ""
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+  graph:
+    edges:
+      - id: neo-start-kb
+        source: neo_start_001
+        sourceHandle: source
+        target: neo_kb_002
+        targetHandle: target
+        type: custom
+        zIndex: 0
+        data:
+          sourceType: start
+          targetType: knowledge-retrieval
+          isInIteration: false
+          isInLoop: false
+      - id: neo-kb-caption
+        source: neo_kb_002
+        sourceHandle: source
+        target: neo_caption_003
+        targetHandle: target
+        type: custom
+        zIndex: 0
+        data:
+          sourceType: knowledge-retrieval
+          targetType: llm
+          isInIteration: false
+          isInLoop: false
+      - id: neo-caption-image
+        source: neo_caption_003
+        sourceHandle: source
+        target: neo_image_004
+        targetHandle: target
+        type: custom
+        zIndex: 0
+        data:
+          sourceType: llm
+          targetType: llm
+          isInIteration: false
+          isInLoop: false
+      - id: neo-image-defaults
+        source: neo_image_004
+        sourceHandle: source
+        target: neo_defaults_005
+        targetHandle: target
+        type: custom
+        zIndex: 0
+        data:
+          sourceType: llm
+          targetType: code
+          isInIteration: false
+          isInLoop: false
+      - id: neo-defaults-end
+        source: neo_defaults_005
+        sourceHandle: source
+        target: neo_end_006
+        targetHandle: target
+        type: custom
+        zIndex: 0
+        data:
+          sourceType: code
+          targetType: end
+          isInIteration: false
+          isInLoop: false
+    nodes:
+      - id: neo_start_001
+        type: custom
+        position:
+          x: 30
+          y: 280
+        positionAbsolute:
+          x: 30
+          y: 280
+        width: 244
+        height: 180
+        sourcePosition: right
+        targetPosition: left
+        data:
+          type: start
+          title: Start
+          desc: "Inputs from telegram_post.py / GHA"
+          variables:
+            - variable: aspect
+              label: aspect
+              type: text-input
+              required: true
+              max_length: null
+              options: []
+            - variable: locale
+              label: locale
+              type: text-input
+              required: true
+              max_length: null
+              options: []
+            - variable: slot_index
+              label: slot_index
+              type: text-input
+              required: false
+              max_length: null
+              options: []
+            - variable: recent_aspects
+              label: recent_aspects
+              type: text-input
+              required: false
+              max_length: null
+              options: []
+
+      - id: neo_kb_002
+        type: custom
+        position:
+          x: 330
+          y: 280
+        positionAbsolute:
+          x: 330
+          y: 280
+        width: 244
+        height: 108
+        sourcePosition: right
+        targetPosition: left
+        data:
+          type: knowledge-retrieval
+          title: Knowledge Retrieval
+          desc: "NEO_ERA corpus — replace dataset UUID before import"
+          query_variable_selector:
+            - neo_start_001
+            - aspect
+          dataset_ids:
+            - "__NEO_ERA_DATASET_ID__"
+          retrieval_mode: multiple
+          multiple_retrieval_config:
+            top_k: 5
+            score_threshold: null
+            reranking_enable: false
+
+      - id: neo_caption_003
+        type: custom
+        position:
+          x: 630
+          y: 200
+        positionAbsolute:
+          x: 630
+          y: 200
+        width: 244
+        height: 98
+        sourcePosition: right
+        targetPosition: left
+        data:
+          type: llm
+          title: Caption Writer
+          desc: "HTML caption for Telegram sendPhoto"
+          model:
+            provider: langgenius/gemini/google
+            name: gemini-2.0-flash
+            mode: chat
+            completion_params:
+              temperature: 0.4
+              max_tokens: 1024
+          prompt_template:
+            - role: system
+              text: |
+                You write Telegram photo captions for the NEO_ERA institutional corpus.
+
+                Epistemic rules (mandatory):
+                - Label: INSTITUTIONAL_MODEL · not religious authority
+                - Never use: guilty, criminal, proven, legitimate ruler, prophecy, sovereign mandate
+                - Prefer: analytical contribution, legitimacy signals (modeled), possible / consistent with
+                - Output valid HTML only (<b>, <i>, <code> allowed). No markdown.
+                - Locale: {{#neo_start_001.locale#}} — write caption in English unless locale is "ru".
+                - Aspect wire ref: {{#neo_start_001.aspect#}}
+                - Use retrieved context from knowledge base; do not invent axioms.
+                - If recent_aspects is non-empty, avoid repeating those aspects.
+
+                Format:
+                <b>NEO_ERA:X</b> — short label
+                <i>INSTITUTIONAL_MODEL · not religious authority</i>
+
+                2–4 sentences of analytical commentary grounded in the corpus.
+                Keep under 900 characters (footer is appended by the poster script).
+
+                Retrieved context:
+                {{#context#}}
+            - role: user
+              text: |
+                aspect={{#neo_start_001.aspect#}}
+                locale={{#neo_start_001.locale#}}
+                slot_index={{#neo_start_001.slot_index#}}
+                recent_aspects={{#neo_start_001.recent_aspects#}}
+          variables: []
+          context:
+            enabled: true
+            variable_selector:
+              - neo_kb_002
+              - result
+          vision:
+            enabled: false
+          memory:
+            query_prompt_template: "{{#neo_start_001.aspect#}}"
+            window:
+              enabled: false
+              size: 10
+
+      - id: neo_image_004
+        type: custom
+        position:
+          x: 930
+          y: 280
+        positionAbsolute:
+          x: 930
+          y: 280
+        width: 244
+        height: 98
+        sourcePosition: right
+        targetPosition: left
+        data:
+          type: llm
+          title: Image Prompt Writer
+          desc: "English FLUX prompt — no text in image"
+          model:
+            provider: langgenius/gemini/google
+            name: gemini-2.0-flash
+            mode: chat
+            completion_params:
+              temperature: 0.5
+              max_tokens: 512
+          prompt_template:
+            - role: system
+              text: |
+                Write a single English image-generation prompt for FLUX schnell.
+                Subject: symbolic illustration for {{#neo_start_001.aspect#}} from NEO_ERA corpus.
+                Style: abstract geometry, topological mirror motifs, muted omega palette, institutional aesthetic.
+                Constraints: no text, no logos, no faces of real people, no religious iconography.
+                One paragraph, max 200 words. Output only the prompt, no preamble.
+            - role: user
+              text: |
+                Caption context (for coherence):
+                {{#neo_caption_003.text#}}
+          variables: []
+          context:
+            enabled: false
+            variable_selector: []
+          vision:
+            enabled: false
+          memory:
+            query_prompt_template: "{{#neo_start_001.aspect#}}"
+            window:
+              enabled: false
+              size: 10
+
+      - id: neo_defaults_005
+        type: custom
+        position:
+          x: 1230
+          y: 280
+        positionAbsolute:
+          x: 1230
+          y: 280
+        width: 244
+        height: 90
+        sourcePosition: right
+        targetPosition: left
+        data:
+          type: code
+          title: Optional Defaults
+          desc: "Empty long_text and image_url — GHA uses fal.ai when FAL_KEY set"
+          code: |
+            def main() -> dict:
+                return {"long_text": "", "image_url": ""}
+          code_language: python3
+          variables: []
+          outputs:
+            long_text:
+              type: string
+              children: null
+            image_url:
+              type: string
+              children: null
+
+      - id: neo_end_006
+        type: custom
+        position:
+          x: 1530
+          y: 280
+        positionAbsolute:
+          x: 1530
+          y: 280
+        width: 244
+        height: 180
+        sourcePosition: right
+        targetPosition: left
+        data:
+          type: end
+          title: End
+          desc: "Outputs consumed by scripts/dify_client.extract_outputs()"
+          outputs:
+            - variable: caption_html
+              value_selector:
+                - neo_caption_003
+                - text
+              value_type: string
+            - variable: image_prompt
+              value_selector:
+                - neo_image_004
+                - text
+              value_type: string
+            - variable: aspect
+              value_selector:
+                - neo_start_001
+                - aspect
+              value_type: string
+            - variable: long_text
+              value_selector:
+                - neo_defaults_005
+                - long_text
+              value_type: string
+            - variable: image_url
+              value_selector:
+                - neo_defaults_005
+                - image_url
+              value_type: string
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.7
