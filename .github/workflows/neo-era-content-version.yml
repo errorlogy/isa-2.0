@@ -1,0 +1,71 @@
+name: NEO_ERA Content Version (test)
+
+# Parallel test workflow for Dify + fal.ai content-version posts.
+# Does NOT run on schedule until validated — use workflow_dispatch only.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print payload only (no Telegram send)"
+        required: false
+        default: true
+        type: boolean
+      aspect:
+        description: "NEO_ERA:I..X or Roman (empty = auto-rotate by day)"
+        required: false
+        type: string
+      locale:
+        description: "Locale passed to Dify workflow"
+        required: false
+        default: en
+        type: choice
+        options:
+          - en
+          - ru
+
+  # Uncomment after 3–5 successful dry-run + live posts:
+  # schedule:
+  #   # 12 runs/day — every 2h at :17 and :37 (avoids top-of-hour GHA load)
+  #   - cron: "17 1,3,5,7,9,11,13,15,17,19,21,23 * * *"
+  #   - cron: "37 0,2,4,6,8,10,12,14,16,18,20,22 * * *"
+
+concurrency:
+  group: neo-era-content-version-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  content-version:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Content-version dry-run or live post
+        env:
+          MODE: content-version
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          DIFY_API_KEY: ${{ secrets.DIFY_API_KEY }}
+          DIFY_WORKFLOW_ID: ${{ secrets.DIFY_WORKFLOW_ID }}
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+          ASPECT: ${{ github.event.inputs.aspect || '' }}
+          LOCALE: ${{ github.event.inputs.locale || 'en' }}
+          DRY_RUN: ${{ (github.event.inputs.dry_run == true || github.event.inputs.dry_run == 'true') && 'true' || 'false' }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: python scripts/telegram_post.py --mode content-version
+
+      - name: Upload manifest (idempotency audit)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: telegram-content-version-manifest
+          path: .telegram-post-manifest.json
+          if-no-files-found: ignore

@@ -145,10 +145,37 @@ Environment variables (optional):
 
 | Trigger | Behavior |
 |---------|----------|
-| `schedule` | Daily 09:00 UTC — rotates axiom by day-of-year |
-| `workflow_dispatch` | Manual clause / locale / dry_run |
-| `push` | On `docs/CORPUS/artifacts/NEO_ERA*.md` change — posts touched axioms |
-| `repository_dispatch` | `neo-era-post` with optional `clause_id`, `locale`, `sha`, `dry_run` |
+| `schedule` | Daily 09:00 UTC — rotates axiom by day-of-year (corpus mode) |
+| `workflow_dispatch` | Manual `mode` (corpus \| content-version), clause/aspect, locale, dry_run |
+| `push` | On `docs/CORPUS/artifacts/NEO_ERA*.md` change — posts touched axioms (corpus) |
+| `repository_dispatch` | `neo-era-post` with optional `mode`, `clause_id`, `aspect`, `locale`, `sha`, `dry_run` |
+
+Parallel test workflow for AI content versions: [NEO_ERA Content Version](https://github.com/errorlogy/isa-2.0/actions/workflows/neo-era-content-version.yml) (dispatch only; 12×/day cron commented out).
+
+---
+
+## 9. Agents runtime vs coding agents
+
+**`.github/agents/*.agent.md`** configures [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/create-custom-agents) for **how code is written** (e.g. epistemic rules when editing `telegram_post.py`). It does **not** run Dify, RAG, images, or scheduled posts.
+
+**OpenClaw** is a separate self-hosted gateway — not installed into this repo. Not recommended for the scheduled Telegram pipeline.
+
+**Runtime stack:** GitHub Actions + `telegram_post.py` call external APIs (Dify, fal.ai) via secrets. See [AGENTS_RUNTIME.md](AGENTS_RUNTIME.md) and [DIFY_SETUP.md](DIFY_SETUP.md).
+
+### Content-version mode (Dify + fal.ai)
+
+```powershell
+python scripts/telegram_post.py --mode content-version --dry-run
+python scripts/telegram_post.py --mode content-version --dry-run --aspect NEO_ERA:III
+```
+
+| Secret | Required for live content-version |
+|--------|-----------------------------------|
+| `DIFY_API_KEY` | Yes (mock used in dry-run without it) |
+| `DIFY_WORKFLOW_ID` | Yes |
+| `FAL_KEY` | For image generation (or set `image_url` in Dify output) |
+| `TELEGRAM_BOT_TOKEN` | Yes for send |
+| `TELEGRAM_CHANNEL_ID` | Yes for send |
 
 ---
 
