@@ -2,29 +2,17 @@ name: NEO_ERA Telegram
 
 on:
   schedule:
-    # Daily axiom — 09:00 UTC (corpus mode only)
+    # Daily axiom вЂ” 09:00 UTC
     - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
-      mode:
-        description: "corpus = static axiom excerpt; content-version = Dify + fal.ai sendPhoto"
-        required: false
-        default: corpus
-        type: choice
-        options:
-          - corpus
-          - content-version
       dry_run:
         description: "Print payload only (no Telegram send)"
         required: false
         default: false
         type: boolean
       clause_id:
-        description: "Roman numeral I–X (corpus mode; empty = auto-rotate)"
-        required: false
-        type: string
-      aspect:
-        description: "NEO_ERA:I..X or Roman (content-version mode; empty = auto-rotate)"
+        description: "Roman numeral IвЂ“X (empty = auto-rotate by day-of-year)"
         required: false
         type: string
       locale:
@@ -52,7 +40,7 @@ permissions:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -64,19 +52,14 @@ jobs:
 
       - name: Post to Telegram
         env:
-          MODE: ${{ github.event.inputs.mode || github.event.client_payload.mode || 'corpus' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
-          DIFY_API_KEY: ${{ secrets.DIFY_API_KEY }}
-          DIFY_WORKFLOW_ID: ${{ secrets.DIFY_WORKFLOW_ID }}
-          FAL_KEY: ${{ secrets.FAL_KEY }}
           CLAUSE_ID: ${{ github.event.inputs.clause_id || github.event.client_payload.clause_id || '' }}
-          ASPECT: ${{ github.event.inputs.aspect || github.event.client_payload.aspect || '' }}
           LOCALE: ${{ github.event.inputs.locale || github.event.client_payload.locale || 'en' }}
-          DRY_RUN: ${{ (github.event.inputs.dry_run == true || github.event.inputs.dry_run == 'true' || github.event.client_payload.dry_run == true || github.event.client_payload.dry_run == 'true') && 'true' || 'false' }}
+          DRY_RUN: ${{ (github.event.inputs.dry_run == 'true' || github.event.inputs.dry_run == true || github.event.client_payload.dry_run == true || github.event.client_payload.dry_run == 'true') && 'true' || 'false' }}
           GITHUB_SHA: ${{ github.event.client_payload.sha || github.sha }}
           TRIGGER: ${{ github.event_name }}
-        run: python scripts/telegram_post.py --mode "${{ github.event.inputs.mode || github.event.client_payload.mode || 'corpus' }}"
+        run: python scripts/telegram_post.py
 
       - name: Upload manifest (idempotency audit)
         if: always()
