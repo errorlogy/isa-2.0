@@ -26,3 +26,6 @@ docs/MATH/raw/
 dist/
 build/
 *.log
+
+# Telegram poster runtime state (CI artifacts only)
+.telegram-post-manifest.json
