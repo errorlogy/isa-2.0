@@ -56,7 +56,7 @@ jobs:
           TELEGRAM_CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
           CLAUSE_ID: ${{ github.event.inputs.clause_id || github.event.client_payload.clause_id || '' }}
           LOCALE: ${{ github.event.inputs.locale || github.event.client_payload.locale || 'en' }}
-          DRY_RUN: ${{ (github.event.inputs.dry_run == true || github.event.client_payload.dry_run == true) && 'true' || 'false' }}
+          DRY_RUN: ${{ (github.event.inputs.dry_run == true || github.event.inputs.dry_run == 'true' || github.event.client_payload.dry_run == true || github.event.client_payload.dry_run == 'true') && 'true' || 'false' }}
           GITHUB_SHA: ${{ github.event.client_payload.sha || github.sha }}
           TRIGGER: ${{ github.event_name }}
         run: python scripts/telegram_post.py

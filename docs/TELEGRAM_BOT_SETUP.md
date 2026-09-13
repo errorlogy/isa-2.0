@@ -39,17 +39,38 @@ Optional BotFather commands:
 
 ## 3. Resolve channel ID
 
-GitHub secret `TELEGRAM_CHANNEL_ID` can be:
+GitHub secret `TELEGRAM_CHANNEL_ID` must be the **channel** you post to — not the bot.
 
 | Value | Notes |
 |-------|-------|
-| `@OmegaCovenant` | Public username (default in script) |
+| `@OmegaCovenant` | Public channel username (default in script) |
 | `-100xxxxxxxxxx` | Numeric supergroup/channel ID (more reliable in some setups) |
 
-To obtain the numeric ID:
+### Do **not** use the bot username or bot ID
 
-1. Forward any post from @OmegaCovenant to [@userinfobot](https://t.me/userinfobot) or [@getidsbot](https://t.me/getidsbot), **or**
-2. Post a test message with the bot, then call `https://api.telegram.org/bot<TOKEN>/getUpdates`.
+| Wrong value | Example | Why it fails |
+|-------------|---------|--------------|
+| Bot `@username` | `@omega_covenant_poster_bot` | Bot cannot send messages to itself |
+| Bot numeric ID | `123456789` | Same — targets the bot, not the channel |
+
+If `TELEGRAM_CHANNEL_ID` points at the bot, Telegram returns an error like:
+
+> **Bad Request: bots can't send messages to bots**
+
+Fix: set `TELEGRAM_CHANNEL_ID` to `@OmegaCovenant` (or the channel's `-100…` ID from below), then re-run the workflow.
+
+### How to get the channel numeric ID
+
+**Option A — forward a channel post (easiest)**
+
+1. Open [@OmegaCovenant](https://t.me/OmegaCovenant) and forward any message to [@userinfobot](https://t.me/userinfobot) or [@getidsbot](https://t.me/getidsbot).
+2. The bot replies with a **Forwarded from chat** ID like `-1001234567890`. Use that exact value (including the minus sign).
+
+**Option B — after a successful bot post**
+
+1. Post a test message to the channel with your bot (as channel admin).
+2. Call `https://api.telegram.org/bot<TOKEN>/getUpdates`.
+3. In the JSON, find `result[].channel_post.chat.id` — that is the channel ID (starts with `-100`).
 
 ---
 
@@ -60,7 +81,9 @@ Repository: [errorlogy/isa-2.0](https://github.com/errorlogy/isa-2.0)
 | Secret | Required | Value |
 |--------|----------|-------|
 | `TELEGRAM_BOT_TOKEN` | Yes | Token from @BotFather |
-| `TELEGRAM_CHANNEL_ID` | Recommended | `@OmegaCovenant` or numeric `-100…` |
+| `TELEGRAM_CHANNEL_ID` | Recommended | **`@OmegaCovenant`** or numeric **`-100…`** — never the bot's `@…_bot` username or bot ID |
+
+> **Common mistake:** storing the bot username (e.g. `@omega_covenant_poster_bot`) in `TELEGRAM_CHANNEL_ID`. The bot token identifies the sender; the channel ID identifies the destination.
 
 ### Via GitHub UI
 
@@ -71,7 +94,7 @@ Repository: [errorlogy/isa-2.0](https://github.com/errorlogy/isa-2.0)
 ```powershell
 cd C:\Users\Public\ISA_2_0
 gh secret set TELEGRAM_BOT_TOKEN --body "PASTE_TOKEN_FROM_BOTFATHER"
-gh secret set TELEGRAM_CHANNEL_ID --body "@OmegaCovenant"
+gh secret set TELEGRAM_CHANNEL_ID --body "@OmegaCovenant"   # channel, NOT @your_bot_name
 ```
 
 ---
