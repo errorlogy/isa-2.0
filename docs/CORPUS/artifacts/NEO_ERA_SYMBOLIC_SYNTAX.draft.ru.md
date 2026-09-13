@@ -7,9 +7,13 @@ language: ru
 framework: ISA_2.0
 parent_artifact: NEO_ERA
 en_primary: NEO_ERA_SYMBOLIC_SYNTAX.draft.md
+public_memetic_channel: https://t.me/OmegaCovenant
+public_memetic_channel_handle: @OmegaCovenant
 ---
 
 > **ЧЕРНОВИК — не канон.** Комментарий к четырём предварительным последовательностям (РАЗ / ДВА / ТРИ / ЧЕТЫРЕ). Полная аналитическая рамка — в [английской версии](NEO_ERA_SYMBOLIC_SYNTAX.draft.md).
+
+Публичный меметический канал (outreach, не религиозный авторитет): [@OmegaCovenant](https://t.me/OmegaCovenant).
 
 # NEO_ERA — символический синтаксис (черновик, RU)
 
